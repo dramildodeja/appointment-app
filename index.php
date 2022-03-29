@@ -285,7 +285,7 @@ function draw_calendar($month,$year){
 	return $calendar;
 }
 include 'config.php';
-echo '<hr><h3>Viewing Appointments</h3>';
+echo '<br><h3>View Appointments</h3>';
 $d = new DateTime(date("Y-m-d"));
 echo '<h3>' . $months[$d->format('n')-1] . ' ' . $d->format('Y') . '</h3>';
 echo draw_calendar($d->format('m'),$d->format('Y'));
