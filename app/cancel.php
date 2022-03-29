@@ -4,7 +4,7 @@ session_start();
 <html>
 <head>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<title>Cancel Booking</title>
+<title>Cancel Appointment Booking</title>
 </head>
 <body>
 <?php
@@ -23,6 +23,6 @@ else {
 }
 mysqli_close($conn);
 ?>
-<a href="../index.php"><p>Back to the booking calendar</p></a>
+<a href="../index.php"><p>Back To Appointment Booking</p></a>
 </body>
 </html>

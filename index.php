@@ -58,7 +58,7 @@ td.calendar-day, td.calendar-day-np {
 </style>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <title>Appointment Booking App</title>
-<link href="js/jquery-ui.css" rel="stylesheet">
+<link href="css/jquery-ui.css" rel="stylesheet">
 <script src="js/jquery-1.10.2.js"></script>
 <script src="js/jquery-ui.js"></script>
 <!--<script src="lang/datepicker-fi.js"></script>-->
