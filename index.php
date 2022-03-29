@@ -100,16 +100,22 @@ td.calendar-day, td.calendar-day-np {
 			<table style="width: 70%">
 				<tr>
 					<td>Name:</td>
-					<td><input maxlength="50" name="name" required="" type="text" /></td>
+					<td><input maxlength="50" name="name" required="true" type="text" /></td>
 					<td>&nbsp;</td>
 					<td>&nbsp;</td>
 				</tr>
 				<tr>
 					<td>Phone:</td>
-					<td><input maxlength="20" name="phone" required="" type="text" /></td>
+					<td><input maxlength="20" name="phone" required="true" type="phone" /></td>
 					<td>&nbsp;</td>
 					<td>&nbsp;</td>
 				</tr>
+				<tr>
+                    <td>Email:</td>
+                    <td><input maxlength="20" name="email" required="true" type="email" /></td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
 				<tr>
 					<td>Time:</td>
 					<td><input id="from" name="start_day" required="" type="text" /></td>
@@ -228,7 +234,7 @@ function draw_calendar($month,$year){
     		if (mysqli_num_rows($result) > 0) {
     			while($row = mysqli_fetch_assoc($result)) {
 					if($row["canceled"] == 1) $calendar .= "<font color=\"grey\"><s>";
-    				$calendar .= "<b>" . $row["item"] . "</b><br>ID: " . $row["id"] . "<br>" . $row["name"] . "<br>" . $row["phone"] . "<br>";
+    				$calendar .= "<b>" . $row["item"] . "</b><br>ID: " . $row["id"] . "<br>" . $row["name"] . "<br>" . $row["phone"] . "<br>" . $row["email"] . "<br>";
     				if($current_epoch == $row["start_day"] AND $current_epoch != $row["end_day"]) {
     					$calendar .= "Booking starts: " . sprintf("%02d:%02d", $row["start_time"]/60/60, ($row["start_time"]%(60*60)/60)) . "<br><hr><br>";
     				}
