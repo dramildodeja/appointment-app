@@ -6,7 +6,7 @@
 	}
 	$sql = "DROP TABLE $tablename";
     if (mysqli_query($conn, $sql)) {
-        echo "Table " . $tablename . " dropped successfully";
+        echo "Table " . $tablename . " dropped successfully" . "<br>";
     } else {
         echo "Error dropping table: " . mysqli_error($conn);
     }
@@ -23,7 +23,7 @@
 		canceled INT(1)
 	)";
 	if (mysqli_query($conn, $sql)) {
-		echo "Table " . $tablename . " created successfully";
+		echo "Table " . $tablename . " created successfully" . "<br>";
 	} else {
 		echo "Error creating table: " . mysqli_error($conn);
 	}

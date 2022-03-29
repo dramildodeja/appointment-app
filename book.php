@@ -19,6 +19,7 @@ $end_day = intval(strtotime(htmlspecialchars($_POST["end_day"])));
 $end_time = (60*60*intval(htmlspecialchars($_POST["end_hour"]))) + (60*intval(htmlspecialchars($_POST["end_minute"])));
 $name = htmlspecialchars($_POST["name"]);
 $phone = htmlspecialchars($_POST["phone"]);
+$email = htmlspecialchars($_POST["email"]);
 $item = htmlspecialchars($_POST["item"]);
 $start_epoch = $start_day + $start_time;
 $end_epoch = $end_day + $end_time;
@@ -28,18 +29,18 @@ if (mysqli_num_rows($result) > 0) {
     while($row = mysqli_fetch_assoc($result)) {
         for ($i = $start_epoch; $i <= $end_epoch; $i=$i+600) {
             if ($i>($row["start_day"]+$row["start_time"]) && $i<($row["end_day"]+$row["end_time"])) {
-                echo '<h3><font color="red">Unfortunately ' . $item . ' has already been booked for the time requested.</font></h3>';
+                echo '<h3><font color="red">Unfortunately ' . $item . ' appointment has already been booked for the time requested.</font></h3>';
                 goto end;
             }
         }
     }
 }
-$sql = "INSERT INTO $tablename (name, phone, item, start_day, start_time, end_day, end_time, canceled)
-    VALUES ('$name','$phone', '$item', $start_day, $start_time, $end_day, $end_time, 0)";
+$sql = "INSERT INTO $tablename (name, phone, email, item, start_day, start_time, end_day, end_time, canceled)
+    VALUES ('$name','$phone', 'email', '$item', $start_day, $start_time, $end_day, $end_time, 0)";
 if (mysqli_query($conn, $sql)) {
-    echo "<h3>Booking succeed.</h3>";
+    echo "<h3>Appointment Booking Was Successful</h3>";
 } else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    echo "Error Occurred While Appointment Booking: " . $sql . "<br>" . mysqli_error($conn);
 }
 end:
 mysqli_close($conn);
