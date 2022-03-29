@@ -85,19 +85,19 @@ td.calendar-day, td.calendar-day-np {
     });
   });  </script>
 </head>
-
 <body>
-
-<h1>Booking calendar - DEMO</h1>
+<h1>Appointment Booking</h1>
 <table border="1" cellpadding="5" width="800">
 	<tr>
 		<td valign="top">
 		<form action="book.php" method="post">
-			<h3>Make booking</h3>
-			<p><input checked="checked" name="item" type="radio" value="Room 1" />Room 1
-			| <input name="item" type="radio" value="Room 2" />Room 2
-			| <input name="item" type="radio" value="Room 3" />Room 3 |
-			<input name="item" type="radio" value="Room 4" />Room 4</p>
+			<h3>Appointment Details</h3>
+			<p>
+                <input checked="checked" name="item" type="radio" value="Conf Room 1" />Conf Room 1
+                | <input name="item" type="radio" value="Conf Room 1" />Conf Room 2
+                | <input name="item" type="radio" value="Conf Room 1" />Conf Room 3
+                | <input name="item" type="radio" value="Conf Room 1" />Conf Room 4
+			</p>
 			<table style="width: 70%">
 				<tr>
 					<td>Name:</td>
@@ -107,91 +107,97 @@ td.calendar-day, td.calendar-day-np {
 				</tr>
 				<tr>
 					<td>Phone:</td>
-					<td>
-			<input maxlength="20" name="phone" required="" type="text" /></td>
+					<td><input maxlength="20" name="phone" required="" type="text" /></td>
 					<td>&nbsp;</td>
 					<td>&nbsp;</td>
 				</tr>
 				<tr>
-					<td>Reservation time:</td>
-					<td>
-			<input id="from" name="start_day" required="" type="text" /></td>
+					<td>Time:</td>
+					<td>&nbsp;</td>
+                    <td>&nbsp;</td>
+					<td><input id="from" name="start_day" required="" type="text" /></td>
 					<td>-</td>
 					<td><input id="to" name="end_day" required="" type="text" /></td>
 				</tr>
 				<tr>
 					<td>&nbsp;</td>
 					<td> <select name="start_hour">
-			<option selected="selected">00</option>
-			<option>01</option>
-			<option>02</option>
-			<option>03</option>
-			<option>04</option>
-			<option>05</option>
-			<option>06</option>
-			<option>07</option>
-			<option>08</option>
-			<option>09</option>
-			<option>10</option>
-			<option>11</option>
-			<option>12</option>
-			<option>13</option>
-			<option>14</option>
-			<option>15</option>
-			<option>16</option>
-			<option>17</option>
-			<option>18</option>
-			<option>19</option>
-			<option>20</option>
-			<option>21</option>
-			<option>22</option>
-			<option>23</option>
-			</select>:<select name="start_minute">
-			<option selected="selected">00</option>
-			<option>30</option>
-			</select></td>
+                        <option selected="selected">00</option>
+                        <option>01</option>
+                        <option>02</option>
+                        <option>03</option>
+                        <option>04</option>
+                        <option>05</option>
+                        <option>06</option>
+                        <option>07</option>
+                        <option>08</option>
+                        <option>09</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option>23</option>
+                        </select>:<select name="start_minute">
+                        <option selected="selected">00</option>
+                        <option>30</option>
+                        </select></td>
 					<td>&nbsp;</td>
 					<td><select name="end_hour">
-			<option>00</option>
-			<option>01</option>
-			<option>02</option>
-			<option>03</option>
-			<option>04</option>
-			<option>05</option>
-			<option>06</option>
-			<option>07</option>
-			<option>08</option>
-			<option>09</option>
-			<option>10</option>
-			<option>11</option>
-			<option>12</option>
-			<option>13</option>
-			<option>14</option>
-			<option>15</option>
-			<option>16</option>
-			<option>17</option>
-			<option>18</option>
-			<option>19</option>
-			<option>20</option>
-			<option>21</option>
-			<option>22</option>
-			<option selected="selected">23</option>
-			</select>:<select name="end_minute">
-			<option>00</option>
-			<option selected="selected">30</option>
-			</select></td>
+                        <option>00</option>
+                        <option>01</option>
+                        <option>02</option>
+                        <option>03</option>
+                        <option>04</option>
+                        <option>05</option>
+                        <option>06</option>
+                        <option>07</option>
+                        <option>08</option>
+                        <option>09</option>
+                        <option>10</option>
+                        <option>11</option>
+                        <option>12</option>
+                        <option>13</option>
+                        <option>14</option>
+                        <option>15</option>
+                        <option>16</option>
+                        <option>17</option>
+                        <option>18</option>
+                        <option>19</option>
+                        <option>20</option>
+                        <option>21</option>
+                        <option>22</option>
+                        <option selected="selected">23</option>
+                        </select>:<select name="end_minute">
+                        <option>00</option>
+                        <option selected="selected">30</option>
+                        </select>
+                    </td>
 				</tr>
 			</table>
 			<p>
-			<input name="book" type="submit" value="Book" />
+			    &nbsp;&nbsp;&nbsp;&nbsp;
+			    <input name="book" type="submit" value="Book Appointment" />
+			</p>
 		</form>
 		</td>
 		<td valign="top">
-		<h3>Cancel booking</h3>
+		<h3>Cancel Existing Appointment</h3>
 		<form action="cancel.php" method="post">
 			<p></p>
 			ID: <input name="id" required="" type="text" /><br />
-			<p><input name="cancel" type="submit" value="Cancel" /></p>
+			<p>
+			    &nbsp;&nbsp;&nbsp;&nbsp;
+			    <input name="cancel" type="submit" value="Cancel Appointment" />
+            </p>
 		</form>
 		</td>
 	</tr>
@@ -266,6 +272,7 @@ function draw_calendar($month,$year){
 	return $calendar;
 }
 include 'config.php';
+<h3>Existing Appointment Details</h3>
 $d = new DateTime(date("Y-m-d"));
 echo '<h3>' . $months[$d->format('n')-1] . ' ' . $d->format('Y') . '</h3>';
 echo draw_calendar($d->format('m'),$d->format('Y'));
