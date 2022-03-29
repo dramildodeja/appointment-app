@@ -16,7 +16,7 @@ if (!$conn) {
 $id = intval(htmlspecialchars($_POST["id"]));
 $sql = "UPDATE $tablename SET canceled=1 WHERE id = $id";
 if (mysqli_query($conn, $sql)) {
-    echo "<h3>Booking cancelled.</h3>";
+    echo "<h3>Appointment Was Canceled!</h3>";
 }
 else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);

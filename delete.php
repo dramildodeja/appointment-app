@@ -16,7 +16,7 @@ if (!$conn) {
 $id = intval(htmlspecialchars($_POST["id"]));
 $sql = "DELETE FROM $tablename WHERE id = $id";
 if (mysqli_query($conn, $sql)) {
-    echo "<h3>Booking deleted.</h3>";
+    echo "<h3>Appointment Was Deleted!</h3>";
 }
 else {
     echo "Error: " . $sql . "<br>" . mysqli_error($conn);

@@ -36,9 +36,9 @@ if (mysqli_num_rows($result) > 0) {
     }
 }
 $sql = "INSERT INTO $tablename (name, phone, email, item, start_day, start_time, end_day, end_time, canceled)
-    VALUES ('$name','$phone', 'email', '$item', $start_day, $start_time, $end_day, $end_time, 0)";
+    VALUES ('$name','$phone', '$email', '$item', $start_day, $start_time, $end_day, $end_time, 0)";
 if (mysqli_query($conn, $sql)) {
-    echo "<h3>Appointment Booking Was Successful</h3>";
+    echo "<h3>Appointment Was Booked!</h3>";
 } else {
     echo "Error Occurred While Appointment Booking: " . $sql . "<br>" . mysqli_error($conn);
 }
