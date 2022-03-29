@@ -58,7 +58,7 @@ td.calendar-day, td.calendar-day-np {
 }
 </style>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
-<title>Booking calendar - DEMO</title>
+<title>Appointment Booking App</title>
 <link href="jquery-ui.css" rel="stylesheet">
 <script src="jquery-1.10.2.js"></script>
 <script src="jquery-ui.js"></script>
@@ -94,10 +94,10 @@ td.calendar-day, td.calendar-day-np {
 		<td valign="top">
 		<form action="book.php" method="post">
 			<h3>Make booking</h3>
-			<p><input checked="checked" name="item" type="radio" value="Meeting room" />Meeting room 
-			| <input name="item" type="radio" value="Swimming pool" />Swimming pool 
-			| <input name="item" type="radio" value="Drill" />Drill | 
-			<input name="item" type="radio" value="Tennis court" />Tennis court</p>
+			<p><input checked="checked" name="item" type="radio" value="Room 1" />Room 1
+			| <input name="item" type="radio" value="Room 2" />Room 2
+			| <input name="item" type="radio" value="Room 3" />Room 3 |
+			<input name="item" type="radio" value="Room 4" />Room 4</p>
 			<table style="width: 70%">
 				<tr>
 					<td>Name:</td>
@@ -183,8 +183,6 @@ td.calendar-day, td.calendar-day-np {
 				</tr>
 			</table>
 			<p>
-			<img id="captchaimg" src="captcha_code_file.php?rand=<?php echo rand(); ?>" /><br>
-			<input id="captcha" name="captcha" required="" type="text" /></p>
 			<input name="book" type="submit" value="Book" />
 		</form>
 		</td>
@@ -193,16 +191,12 @@ td.calendar-day, td.calendar-day-np {
 		<form action="cancel.php" method="post">
 			<p></p>
 			ID: <input name="id" required="" type="text" /><br />
-			<p>
-			<img id="captchaimg2" src="captcha_code_file2.php?rand=<?php echo rand(); ?>" /><br>
-			<input id="captcha2" name="captcha2" required="" type="text" /></p>
 			<p><input name="cancel" type="submit" value="Cancel" /></p>
 		</form>
 		</td>
 	</tr>
 </table>
 <?php
-/* draws a calendar */
 function draw_calendar($month,$year){
 	include 'config.php';
 	$conn = mysqli_connect($servername, $username, $password,  $dbname);

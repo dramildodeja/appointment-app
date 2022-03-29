@@ -9,29 +9,20 @@ session_start();
 </head>
 <body>
 <?php
-if(empty($_SESSION['captcha2'] ) ||
-	strcasecmp($_SESSION['captcha2'], $_POST['captcha2']) != 0)
-	{
-		$errors = "<h3><font color=\"red\">Wrong code!</font></h3>";
-		echo $errors;
-	}
-	if(empty($errors))
-	{
-		include 'config.php';
-		$conn = mysqli_connect($servername, $username, $password,  $dbname);
-		if (!$conn) {
-			die("Connection failed: " . mysqli_connect_error());
-		}
-		$id = intval(htmlspecialchars($_POST["id"]));
-		$sql = "UPDATE $tablename SET canceled=1 WHERE id = $id";
-		if (mysqli_query($conn, $sql)) {
-			echo "<h3>Booking cancelled.</h3>";
-		}
-		else {
-			echo "Error: " . $sql . "<br>" . mysqli_error($conn);
-		}
-		mysqli_close($conn);
-	}
+include 'config.php';
+$conn = mysqli_connect($servername, $username, $password,  $dbname);
+if (!$conn) {
+    die("Connection failed: " . mysqli_connect_error());
+}
+$id = intval(htmlspecialchars($_POST["id"]));
+$sql = "UPDATE $tablename SET canceled=1 WHERE id = $id";
+if (mysqli_query($conn, $sql)) {
+    echo "<h3>Booking cancelled.</h3>";
+}
+else {
+    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+}
+mysqli_close($conn);
 ?>
 <a href="index.php"><p>Back to the booking calendar</p></a>
 </body>
