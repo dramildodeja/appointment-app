@@ -4,12 +4,6 @@
 	if (!$conn) {
 		die("Connection failed: " . mysqli_connect_error());
 	}
-	$sql = "DELETE TABLE $tablename";
-    if (mysqli_query($conn, $sql)) {
-        echo "Table " . $tablename . " deleted successfully";
-    } else {
-        echo "Error deleting table: " . mysqli_error($conn);
-    }
 	$sql = "CREATE TABLE $tablename (
 		id INT(11) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
 		name VARCHAR(50) NOT NULL,
