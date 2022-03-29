@@ -58,10 +58,10 @@ td.calendar-day, td.calendar-day-np {
 </style>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <title>Appointment Booking App</title>
-<link href="css/jquery-ui.css" rel="stylesheet">
-<script src="js/jquery-1.10.2.js"></script>
-<script src="js/jquery-ui.js"></script>
-<!--<script src="lang/datepicker-fi.js"></script>-->
+<link href="../css/jquery-ui.css" rel="stylesheet">
+<script src="../js/jquery-1.10.2.js"></script>
+<script src="../js/jquery-ui.js"></script>
+<!--<script src="../lang/datepicker-fi.js"></script>-->
 <script>
     $(function() {
 	<!--$.datepicker.setDefaults($.datepicker.regional['fi']);-->
@@ -89,7 +89,7 @@ td.calendar-day, td.calendar-day-np {
 <table border="1" cellpadding="5" width="800">
 	<tr>
 		<td valign="top">
-		<form action="app/book.php" method="post">
+		<form action="book.php" method="post">
 			<h3>Appointment Details</h3>
 			<p>
                 <input checked="checked" name="item" type="radio" value="Conf Room 1" />Conf Room 1&nbsp;
@@ -188,7 +188,7 @@ td.calendar-day, td.calendar-day-np {
 		</td>
 		<td valign="top">
 		<h3>Cancel Existing Appointment</h3>
-		<form action="app/cancel.php" method="post">
+		<form action="cancel.php" method="post">
 			<p></p>
 			ID: <input name="id" required="" type="text" /><br />
 			<p>
@@ -201,7 +201,7 @@ td.calendar-day, td.calendar-day-np {
 </table>
 <?php
 function draw_calendar($month,$year){
-	include 'setup/config.php';
+	include 'config.php';
 	$conn = mysqli_connect($servername, $username, $password,  $dbname);
 	if (!$conn) {
     	die("Connection failed: " . mysqli_connect_error());
@@ -268,7 +268,7 @@ function draw_calendar($month,$year){
 	mysqli_close($conn);
 	return $calendar;
 }
-include 'setup/config.php';
+include 'config.php';
 echo '<h3>Existing Appointment Details</h3>';
 $d = new DateTime(date("Y-m-d"));
 echo '<h3>' . $months[$d->format('n')-1] . ' ' . $d->format('Y') . '</h3>';

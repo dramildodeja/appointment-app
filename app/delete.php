@@ -23,6 +23,6 @@ else {
 }
 mysqli_close($conn);
 ?>
-<a href="../index.php"><p>Back To Appointment Booking</p></a>
+<a href="index.php"><p>Back To Appointment Booking</p></a>
 </body>
 </html>
