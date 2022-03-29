@@ -202,14 +202,14 @@ td.calendar-day, td.calendar-day-np {
 			    <input name="cancel" type="submit" value="Cancel Appointment" />
             </p>
 		</form>
-		<br>
+		<p>&nbsp;</p>
 		<h3>Delete Existing Appointment</h3>
         <form action="delete.php" method="post">
             <p></p>
             ID: <input name="id" required="" type="text" /><br />
             <p>
                 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                <input name="cancel" type="submit" value="Cancel Appointment" />
+                <input name="cancel" type="submit" value="Delete Appointment" />
             </p>
         </form>
 		</td>
