@@ -202,6 +202,7 @@ td.calendar-day, td.calendar-day-np {
 			    <input name="cancel" type="submit" value="Cancel Appointment" />
             </p>
 		</form>
+		<br>
 		<h3>Delete Existing Appointment</h3>
         <form action="delete.php" method="post">
             <p></p>
