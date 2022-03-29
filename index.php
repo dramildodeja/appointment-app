@@ -93,15 +93,15 @@ td.calendar-day, td.calendar-day-np {
 		<form action="book.php" method="post">
 			<h3>Appointment Details</h3>
 			<p>
-                <input checked="checked" name="item" type="radio" value="Conf Room 1" />Conf Room 1
-                | <input name="item" type="radio" value="Conf Room 1" />Conf Room 2
-                | <input name="item" type="radio" value="Conf Room 1" />Conf Room 3
-                | <input name="item" type="radio" value="Conf Room 1" />Conf Room 4
+                <input checked="checked" name="item" type="radio" value="Conf Room 1" />Conf Room 1&nbsp;
+                <input name="item" type="radio" value="Conf Room 1" />Conf Room 2&nbsp;
+                <input name="item" type="radio" value="Conf Room 1" />Conf Room 3&nbsp;
+                <input name="item" type="radio" value="Conf Room 1" />Conf Room 4&nbsp;
 			</p>
 			<table style="width: 70%">
 				<tr>
 					<td>Name:</td>
-					<td> <input maxlength="50" name="name" required="" type="text" /></td>
+					<td><input maxlength="50" name="name" required="" type="text" /></td>
 					<td>&nbsp;</td>
 					<td>&nbsp;</td>
 				</tr>
@@ -113,8 +113,6 @@ td.calendar-day, td.calendar-day-np {
 				</tr>
 				<tr>
 					<td>Time:</td>
-					<td>&nbsp;</td>
-                    <td>&nbsp;</td>
 					<td><input id="from" name="start_day" required="" type="text" /></td>
 					<td>-</td>
 					<td><input id="to" name="end_day" required="" type="text" /></td>
@@ -184,7 +182,7 @@ td.calendar-day, td.calendar-day-np {
 				</tr>
 			</table>
 			<p>
-			    &nbsp;&nbsp;&nbsp;&nbsp;
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			    <input name="book" type="submit" value="Book Appointment" />
 			</p>
 		</form>
@@ -195,7 +193,7 @@ td.calendar-day, td.calendar-day-np {
 			<p></p>
 			ID: <input name="id" required="" type="text" /><br />
 			<p>
-			    &nbsp;&nbsp;&nbsp;&nbsp;
+			    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			    <input name="cancel" type="submit" value="Cancel Appointment" />
             </p>
 		</form>
