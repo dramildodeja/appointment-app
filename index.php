@@ -90,7 +90,7 @@ td.calendar-day, td.calendar-day-np {
 	<tr>
 		<td valign="top">
 		<form action="book.php" method="post">
-			<h3>Appointment Details</h3>
+			<h3>Book Appointment</h3>
 			<p>
                 <input checked="checked" name="item" type="radio" value="Conf Room 1" />Conf Room 1&nbsp;
                 <input name="item" type="radio" value="Conf Room 1" />Conf Room 2&nbsp;
@@ -193,7 +193,7 @@ td.calendar-day, td.calendar-day-np {
 		</form>
 		</td>
 		<td valign="top">
-		<h3>Cancel Existing Appointment</h3>
+		<h3>Cancel Appointment</h3>
 		<form action="cancel.php" method="post">
 			<p></p>
 			ID: <input name="id" required="" type="text" /><br />
@@ -203,7 +203,7 @@ td.calendar-day, td.calendar-day-np {
             </p>
 		</form>
 		<p>&nbsp;</p>
-		<h3>Delete Existing Appointment</h3>
+		<h3>Delete Appointment</h3>
         <form action="delete.php" method="post">
             <p></p>
             ID: <input name="id" required="" type="text" /><br />
@@ -285,7 +285,7 @@ function draw_calendar($month,$year){
 	return $calendar;
 }
 include 'config.php';
-echo '<h3>Existing Appointment Details</h3>';
+echo '<hr><h3>Viewing Appointments</h3>';
 $d = new DateTime(date("Y-m-d"));
 echo '<h3>' . $months[$d->format('n')-1] . ' ' . $d->format('Y') . '</h3>';
 echo draw_calendar($d->format('m'),$d->format('Y'));
