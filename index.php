@@ -250,7 +250,7 @@ if (isset($_GET['viewall'])) {
                         :
                         <select name="start_minute">
                            <option value="00" selected="selected">00 MINS</option>
-                           <option value="23">30 MINS</option>
+                           <option value="30">30 MINS</option>
                         </select>
                      </td>
                      <td>&nbsp;</td>
@@ -283,7 +283,7 @@ if (isset($_GET['viewall'])) {
                         </select>
                         <select hidden="true" name="end_minute">
                            <option value="00">00 MINS</option>
-                           <option value="23" selected="selected">30 MINS</option>
+                           <option value="30" selected="selected">30 MINS</option>
                         </select>
                      </td>
                   </tr>
