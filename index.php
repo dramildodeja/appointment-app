@@ -196,8 +196,7 @@ if (isset($_GET['viewall'])) {
 </script>
 </head>
 <body>
-<h1>Appointment Booking</h1>
-<table border="1" cellpadding="5" width="800">
+<table cellpadding="5" width="800">
    <tr>
       <td valign="top">
          <form action="book.php" method="post">
