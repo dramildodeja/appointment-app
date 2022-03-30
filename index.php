@@ -133,9 +133,9 @@ td.calendar-day, td.calendar-day-np {
                <table style="width: 70%">
                   <tr>
                      <td>Time:</td>
-                     <td><input id="from" name="start_day" type="text" /></td>
+                     <td><input id="from" name="start_day" required="true" type="text" /></td>
                      <td>-</td>
-                     <td><input id="to" name="end_day" type="text" /></td>
+                     <td><input id="to" name="end_day" required="true" type="text" /></td>
                   </tr>
                   <tr>
                      <td>&nbsp;</td>
@@ -214,19 +214,19 @@ td.calendar-day, td.calendar-day-np {
                <table style="width: 70%">
                   <tr>
                      <td>Name:</td>
-                     <td><input maxlength="50" name="name" type="text" /></td>
+                     <td><input maxlength="50" name="name" required="true" type="text" /></td>
                      <td>&nbsp;</td>
                      <td>&nbsp;</td>
                   </tr>
                   <tr>
                      <td>Phone:</td>
-                     <td><input maxlength="20" name="phone" type="phone" /></td>
+                     <td><input maxlength="20" name="phone" required="true" type="phone" /></td>
                      <td>&nbsp;</td>
                      <td>&nbsp;</td>
                   </tr>
                   <tr>
                      <td>Email:</td>
-                     <td><input maxlength="20" name="email" type="email" /></td>
+                     <td><input maxlength="20" name="email" required="true" type="email" /></td>
                      <td>&nbsp;</td>
                      <td>&nbsp;</td>
                   </tr>
@@ -236,9 +236,9 @@ td.calendar-day, td.calendar-day-np {
                   <input name="book" type="submit" value="Book Appointment" />
                </p>
             </div>
-            <button id="stepbtn">Next</button>
-            <button id="backbtn">Back</button>
          </form>
+         <button id="stepbtn">Next</button>
+         <button id="backbtn">Back</button>
       </td>
    </tr>
 </table>
