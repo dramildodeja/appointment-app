@@ -203,8 +203,9 @@ if (isset($_GET['viewall'])) {
       <td valign="top">
          <form action="book.php" method="post" autocomplete="off">
             <h3>Book Appointment</h3>
+            <hr>
             <div id="step1">
-               <h3>Select Service</h3>
+               <h4>Select Service</h4>
                <p>
                   <input checked="checked" name="item" type="radio" value="Service 1" />Service 1&nbsp;
                   <input name="item" type="radio" value="Service 2" />Service 2&nbsp;
@@ -213,7 +214,7 @@ if (isset($_GET['viewall'])) {
                </p>
             </div>
             <div id="step2">
-               <h3>Select Date & Time</h3>
+               <h4>Select Date & Time</h4>
                <table>
                   <tr>
                      <td><input id="from" placeholder="Click to open calendar" name="start_day" required="true" type="text" /></td>
@@ -289,7 +290,7 @@ if (isset($_GET['viewall'])) {
                </table>
             </div>
             <div id="step3">
-               <h3>Add Your Details</h3>
+               <h4>Add Your Details</h4>
                <table>
                   <tr>
                      <td>Your Name:</td>
@@ -311,14 +312,14 @@ if (isset($_GET['viewall'])) {
                   </tr>
                   <tr>
                        <td>&nbsp;</td>
-                       <td><input name="book" type="submit" value="Confirm Appointment" /></td>
+                       <td><input style="background:lightgreen" name="book" type="submit" value="Confirm Appointment" /></td>
                        <td>&nbsp;</td>
                        <td>&nbsp;</td>
-                    </tr>
+                  </tr>
                </table>
             </div>
          </form>
-         <br>
+         <hr>
          <button id="stepbtn">Next</button>
          <button id="backbtn">Back</button>
       </td>
