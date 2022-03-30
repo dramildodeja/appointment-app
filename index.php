@@ -216,13 +216,8 @@ if (isset($_GET['viewall'])) {
                <h3>Select Date & Time</h3>
                <table>
                   <tr>
-                     <td>Time:</td>
                      <td><input id="from" placeholder="Click to open calendar" name="start_day" required="true" type="text" /></td>
-                     <! –– <td>-</td><td> -->
                      <input id="to" name="end_day" hidden="true" type="text" />
-                     <! –– </td> -->
-                  </tr>
-                  <tr>
                      <td>&nbsp;</td>
                      <td>
                         <select name="start_hour">
@@ -285,7 +280,6 @@ if (isset($_GET['viewall'])) {
                            <option>22</option>
                            <option selected="selected">23</option>
                         </select>
-                        <! –– : -->
                         <select hidden="true" name="end_minute">
                            <option>00</option>
                            <option selected="selected">30</option>
