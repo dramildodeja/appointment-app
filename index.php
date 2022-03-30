@@ -222,30 +222,30 @@ if (isset($_GET['viewall'])) {
                      <td>&nbsp;</td>
                      <td>
                         <select name="start_hour">
-                           <option selected="selected">00</option>
-                           <option>01</option>
-                           <option>02</option>
-                           <option>03</option>
-                           <option>04</option>
-                           <option>05</option>
-                           <option>06</option>
-                           <option>07</option>
-                           <option>08</option>
-                           <option>09</option>
-                           <option>10</option>
-                           <option>11</option>
-                           <option>12</option>
-                           <option>13</option>
-                           <option>14</option>
-                           <option>15</option>
-                           <option>16</option>
-                           <option>17</option>
-                           <option>18</option>
-                           <option>19</option>
-                           <option>20</option>
-                           <option>21</option>
-                           <option>22</option>
-                           <option>23</option>
+                           <option value="00" selected="selected">Midnight</option>
+                           <option value="01">01 AM</option>
+                           <option value="02">02 AM</option>
+                           <option value="03">03 AM</option>
+                           <option value="04">04 AM</option>
+                           <option value="05">05 AM</option>
+                           <option value="06">06 AM</option>
+                           <option value="07">07 AM</option>
+                           <option value="08">08 AM</option>
+                           <option value="09">09 AM</option>
+                           <option value="10">10 AM</option>
+                           <option value="11">11 AM</option>
+                           <option value="12">12 PM</option>
+                           <option value="13">1 PM</option>
+                           <option value="14">2 PM</option>
+                           <option value="15">3 PM</option>
+                           <option value="16">4 PM</option>
+                           <option value="17">5 PM</option>
+                           <option value="18">6 PM</option>
+                           <option value="19">7 PM</option>
+                           <option value="20">8 PM</option>
+                           <option value="21">9 PM</option>
+                           <option value="22">10 PM</option>
+                           <option value="23">11 PM</option>
                         </select>
                         :
                         <select name="start_minute">
@@ -256,30 +256,30 @@ if (isset($_GET['viewall'])) {
                      <td>&nbsp;</td>
                      <td>
                         <select hidden="true" name="end_hour">
-                           <option>00</option>
-                           <option>01</option>
-                           <option>02</option>
-                           <option>03</option>
-                           <option>04</option>
-                           <option>05</option>
-                           <option>06</option>
-                           <option>07</option>
-                           <option>08</option>
-                           <option>09</option>
-                           <option>10</option>
-                           <option>11</option>
-                           <option>12</option>
-                           <option>13</option>
-                           <option>14</option>
-                           <option>15</option>
-                           <option>16</option>
-                           <option>17</option>
-                           <option>18</option>
-                           <option>19</option>
-                           <option>20</option>
-                           <option>21</option>
-                           <option>22</option>
-                           <option selected="selected">23</option>
+                          <option value="00">Midnight</option>
+                          <option value="01">01 AM</option>
+                          <option value="02">02 AM</option>
+                          <option value="03">03 AM</option>
+                          <option value="04">04 AM</option>
+                          <option value="05">05 AM</option>
+                          <option value="06">06 AM</option>
+                          <option value="07">07 AM</option>
+                          <option value="08">08 AM</option>
+                          <option value="09">09 AM</option>
+                          <option value="10">10 AM</option>
+                          <option value="11">11 AM</option>
+                          <option value="12">12 PM</option>
+                          <option value="13">1 PM</option>
+                          <option value="14">2 PM</option>
+                          <option value="15">3 PM</option>
+                          <option value="16">4 PM</option>
+                          <option value="17">5 PM</option>
+                          <option value="18">6 PM</option>
+                          <option value="19">7 PM</option>
+                          <option value="20">8 PM</option>
+                          <option value="21">9 PM</option>
+                          <option value="22">10 PM</option>
+                          <option value="23" selected="selected">11 PM</option>
                         </select>
                         <select hidden="true" name="end_minute">
                            <option>00</option>
