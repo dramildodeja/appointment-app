@@ -210,7 +210,7 @@ td.calendar-day, td.calendar-day-np {
             </div>
             <div id="step3">
                <h3>Add Your Details</h3>
-               <table style="width: 70%">
+               <table>
                   <tr>
                      <td>Your Name:</td>
                      <td><input maxlength="50" name="name" required="true" type="text" /></td>
@@ -229,11 +229,13 @@ td.calendar-day, td.calendar-day-np {
                      <td>&nbsp;</td>
                      <td>&nbsp;</td>
                   </tr>
+                  <tr>
+                       <td>&nbsp;</td>
+                       <td><input name="book" type="submit" value="Confirm Appointment" /></td>
+                       <td>&nbsp;</td>
+                       <td>&nbsp;</td>
+                    </tr>
                </table>
-               <p>
-                  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <input name="book" type="submit" value="Confirm Appointment" />
-               </p>
             </div>
          </form>
          <br>
