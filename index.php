@@ -55,6 +55,13 @@ td.calendar-day, td.calendar-day-np {
 	border-bottom: 1px solid #999;
 	border-right: 1px solid #999;
 }
+#step2 {
+    display:none;
+}
+#step3 {
+    display:none;
+}
+#backbtn { display: none }
 </style>
 <meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 <title>Appointment Booking App</title>
@@ -82,7 +89,28 @@ td.calendar-day, td.calendar-day-np {
         $( "#from" ).datepicker( "option", "maxDate", selectedDate );
       }
     });
-  });  </script>
+  });
+   $('#stepbtn').click( function() {
+      if ($('#step2').is(':visible')) {
+          $('#step3').show();
+          $('#backbtn').show();
+      } else if ($('#step1').is(':visible')) {
+          $('#step2').show();
+          $('#backbtn').show();
+      }
+   });
+
+   $('#backbtn').click( function() {
+      if ($('#step3').is(':visible')) {
+          $('#step3').hide();
+          $('#stepbtn').show();
+      } else if ($('#step2').is(':visible')) {
+          $('#step2').hide();
+          $('#stepbtn').show();
+          $('#backbtn').hide();
+      }
+   });
+</script>
 </head>
 <body>
 <h1>Appointment Booking</h1>
