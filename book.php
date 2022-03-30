@@ -15,8 +15,7 @@ if (!$conn) {
 }
 $start_day = intval(strtotime(htmlspecialchars($_POST["start_day"])));
 $start_time = (60*60*intval(htmlspecialchars($_POST["start_hour"]))) + (60*intval(htmlspecialchars($_POST["start_minute"])));
-echo $start_time
-//$end_day = intval(strtotime(htmlspecialchars($_POST["end_day"])));
+$end_day = intval(strtotime(htmlspecialchars($_POST["end_day"])));
 $end_day = intval(strtotime(htmlspecialchars($_POST["start_day"])));
 $end_time = (60*60*intval(htmlspecialchars($_POST["end_hour"]))) + (60*intval(htmlspecialchars($_POST["end_minute"])));
 $name = htmlspecialchars($_POST["name"]);
@@ -24,7 +23,8 @@ $phone = htmlspecialchars($_POST["phone"]);
 $email = htmlspecialchars($_POST["email"]);
 $item = htmlspecialchars($_POST["item"]);
 $start_epoch = $start_day + $start_time;
-$end_epoch = $end_day + $end_time;
+//$end_epoch = $end_day + $end_time;
+$end_epoch = ($start_day + $start_time) + (60*30);
 $sql = "SELECT * FROM $tablename WHERE item='$item' AND (start_day>=$start_day OR end_day>=$start_day) AND canceled=0";
 $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
