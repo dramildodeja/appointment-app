@@ -29,7 +29,7 @@ if (mysqli_num_rows($result) > 0) {
     while($row = mysqli_fetch_assoc($result)) {
         for ($i = $start_epoch; $i <= $end_epoch; $i=$i+600) {
             if ($i>($row["start_day"]+$row["start_time"]) && $i<($row["end_day"]+$row["end_time"])) {
-                echo '<h3><font color="red">Unfortunately ' . $item . ' appointment has already been booked for the time requested.</font></h3>';
+                echo '<h3><font color="red">Unfortunately ' . $item . ' appointment already exists for the date & time requested.</font></h3>';
                 goto end;
             }
         }
@@ -38,13 +38,22 @@ if (mysqli_num_rows($result) > 0) {
 $sql = "INSERT INTO $tablename (name, phone, email, item, start_day, start_time, end_day, end_time, canceled)
     VALUES ('$name','$phone', '$email', '$item', $start_day, $start_time, $end_day, $end_time, 0)";
 if (mysqli_query($conn, $sql)) {
-    echo "<h3>Appointment Was Booked!</h3>";
+    mysqli_close($conn);
+
+    $to = 'ddarizona158@gmail.com';
+    $subject = 'Test Subject';
+    $message = 'Test Message';
+    $headers = 'From: webmaster@example.com'       . "\r\n" .
+                 'Reply-To: webmaster@example.com' . "\r\n" .
+                 'X-Mailer: PHP/' . phpversion();
+    mail($to, $subject, $message, $headers);
+
+    echo "<script>alert('Appointment was booked successfully with a confirmation email');window.location.href='index.php';</script>";
 } else {
-    echo "Error Occurred While Appointment Booking: " . $sql . "<br>" . mysqli_error($conn);
+    echo "<script>alert('Error occurred while booking appointment. Please contact admin!');window.location.href='index.php';</script>";
 }
 end:
-mysqli_close($conn);
 ?>
-<a href="index.php"><p>Back To Appointment Booking</p></a>
+<a href="index.php"><p>Back To Booking</p></a>
 </body>
 </html>
