@@ -16,12 +16,11 @@ if (!$conn) {
 $id = intval(htmlspecialchars($_GET["id"]));
 $sql = "UPDATE $tablename SET canceled=1 WHERE id = $id";
 if (mysqli_query($conn, $sql)) {
-    echo "<script>alert('Appointment was cancelled successfully');</script>";
+    mysqli_close($conn);
+    echo "<script>alert('Appointment was cancelled successfully');window.location.href='index.php?viewall=true';</script>";
 } else {
-    echo "<script>alert('Error occurred while cancelling appointment. Please contact admin!');</script>";
+    echo "<script>alert('Error occurred while cancelling appointment. Please contact admin!');window.location.href='index.php?viewall=true';</script>";
 }
-mysqli_close($conn);
-header("Location: index.php?viewall=true");
 ?>
 </body>
 </html>

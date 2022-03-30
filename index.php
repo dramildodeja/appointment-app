@@ -91,7 +91,6 @@ if (isset($_GET['viewall'])) {
         		$days_in_this_week++;
         	endfor;
         	for($list_day = 1; $list_day <= $days_in_month; $list_day++):
-        		    $currentId = $row["id"];
         		    $calendar.= '<td class="calendar-day">';
         			$calendar.= '<div class="day-number">'.$list_day.'</div>';
         			$calendar.= str_repeat('<p> </p>',2);
@@ -117,8 +116,7 @@ if (isset($_GET['viewall'])) {
         					if($row["canceled"] == 1) {
         					    $calendar .= "</s></font>";
         					}
-        					$calendar .= "<a href='cancel.php?id=".$currentId."'>Cancel</a><br><hr><br>";
-        					$calendar .= "<a href='delete.php?id=".$currentId."'>Delete</a><br><hr><br>";
+        					$calendar .= "<a href='cancel.php?id=".$row["id"]."'>Cancel</a>&nbsp;|&nbsp;<a href='delete.php?id=".$row["id"]."'>Delete</a>";
             			}
         			} else {
             			$calendar .= "No bookings";

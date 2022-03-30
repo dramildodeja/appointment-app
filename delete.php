@@ -16,13 +16,11 @@ if (!$conn) {
 $id = intval(htmlspecialchars($_GET["id"]));
 $sql = "DELETE FROM $tablename WHERE id = $id";
 if (mysqli_query($conn, $sql)) {
-    echo "<script>alert('Appointment was deleted successfully');</script>";
+    mysqli_close($conn);
+    echo "<script>alert('Appointment was deleted successfully');window.location.href='index.php?viewall=true';</script>";
+} else {
+    echo "<script>alert('Error occurred while deleting appointment. Please contact admin!');window.location.href='index.php?viewall=true';</script>";
 }
-else {
-    echo "<script>alert('Error occurred while deleting appointment. Please contact admin!');</script>";
-}
-mysqli_close($conn);
-header("Location: index.php?viewall=true");
 ?>
 </body>
 </html>
