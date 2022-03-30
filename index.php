@@ -129,7 +129,7 @@ td.calendar-day, td.calendar-day-np {
             </div>
             <div id="step2">
                <h3>Select Date & Time</h3>
-               <table style="width: 70%">
+               <table>
                   <tr>
                      <td>Time:</td>
                      <td><input id="from" name="start_day" required="true" type="text" /></td>
@@ -209,13 +209,19 @@ td.calendar-day, td.calendar-day-np {
                </table>
             </div>
             <div id="step3">
-               <h3>Provide Personal Information</h3>
+               <h3>Add Your Details</h3>
                <table style="width: 70%">
                   <tr>
-                     <td>Name:</td>
+                     <td>Your Name:</td>
                      <td><input maxlength="50" name="name" required="true" type="text" /></td>
                      <td>&nbsp;</td>
                      <td>&nbsp;</td>
+                  </tr>
+                  <tr>
+                       <td>Email:</td>
+                       <td><input maxlength="20" name="email" required="true" type="email" /></td>
+                       <td>&nbsp;</td>
+                       <td>&nbsp;</td>
                   </tr>
                   <tr>
                      <td>Phone:</td>
@@ -223,19 +229,14 @@ td.calendar-day, td.calendar-day-np {
                      <td>&nbsp;</td>
                      <td>&nbsp;</td>
                   </tr>
-                  <tr>
-                     <td>Email:</td>
-                     <td><input maxlength="20" name="email" required="true" type="email" /></td>
-                     <td>&nbsp;</td>
-                     <td>&nbsp;</td>
-                  </tr>
                </table>
                <p>
                   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-                  <input name="book" type="submit" value="Book Appointment" />
+                  <input name="book" type="submit" value="Confirm Appointment" />
                </p>
             </div>
          </form>
+         <br>
          <button id="stepbtn">Next</button>
          <button id="backbtn">Back</button>
       </td>
