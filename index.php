@@ -201,7 +201,7 @@ if (isset($_GET['viewall'])) {
 <table cellpadding="5" width="800">
    <tr>
       <td valign="top">
-         <form action="book.php" method="post">
+         <form action="book.php" method="post" autocomplete="off">
             <h3>Book Appointment</h3>
             <div id="step1">
                <h3>Select Service</h3>
@@ -305,7 +305,7 @@ if (isset($_GET['viewall'])) {
                   </tr>
                   <tr>
                      <td>Phone:</td>
-                     <td><input maxlength="20" name="phone" required="true" type="phone" /></td>
+                     <td><input maxlength="10" name="phone" required="true" type="phone" /></td>
                      <td>&nbsp;</td>
                      <td>&nbsp;</td>
                   </tr>
