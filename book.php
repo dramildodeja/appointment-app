@@ -15,10 +15,10 @@ if (!$conn) {
 }
 $start_day = intval(strtotime(htmlspecialchars($_POST["start_day"])));
 $start_time = (60*60*intval(htmlspecialchars($_POST["start_hour"]))) + (60*intval(htmlspecialchars($_POST["start_minute"])));
+echo '<script>alert('.$start_time.');</script>'
 //$end_day = intval(strtotime(htmlspecialchars($_POST["end_day"])));
 $end_day = intval(strtotime(htmlspecialchars($_POST["start_day"])));
-//$end_time = (60*60*intval(htmlspecialchars($_POST["end_hour"]))) + (60*intval(htmlspecialchars($_POST["end_minute"])));
-$end_time = (60*60*intval(htmlspecialchars($_POST["start_hour"]))) + (60*intval(htmlspecialchars($_POST["end_minute"])));
+$end_time = (60*60*intval(htmlspecialchars($_POST["end_hour"]))) + (60*intval(htmlspecialchars($_POST["end_minute"])));
 $name = htmlspecialchars($_POST["name"]);
 $phone = htmlspecialchars($_POST["phone"]);
 $email = htmlspecialchars($_POST["email"]);
