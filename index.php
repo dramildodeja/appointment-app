@@ -89,8 +89,7 @@ td.calendar-day, td.calendar-day-np {
         $( "#from" ).datepicker( "option", "maxDate", selectedDate );
       }
     });
-  });
-   $('#stepbtn').click( function() {
+    $('#stepbtn').click( function() {
       if ($('#step2').is(':visible')) {
           $('#step3').show();
           $('#backbtn').show();
@@ -99,7 +98,6 @@ td.calendar-day, td.calendar-day-np {
           $('#backbtn').show();
       }
    });
-
    $('#backbtn').click( function() {
       if ($('#step3').is(':visible')) {
           $('#step3').hide();
@@ -110,6 +108,7 @@ td.calendar-day, td.calendar-day-np {
           $('#backbtn').hide();
       }
    });
+  });
 </script>
 </head>
 <body>
