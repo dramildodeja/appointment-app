@@ -24,7 +24,7 @@ $email = htmlspecialchars($_POST["email"]);
 $item = htmlspecialchars($_POST["item"]);
 $start_epoch = $start_day + $start_time;
 //$end_epoch = $end_day + $end_time;
-$end_epoch = ($start_day + $start_time) + (60*30);
+$end_epoch = ($start_day + ($start_time + (60*30)));
 $sql = "SELECT * FROM $tablename WHERE item='$item' AND (start_day>=$start_day OR end_day>=$start_day) AND canceled=0";
 $result = mysqli_query($conn, $sql);
 if (mysqli_num_rows($result) > 0) {
