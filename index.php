@@ -114,6 +114,8 @@ if (isset($_GET['viewall'])) {
         	    				$calendar .= "Booking: 24h<br><hr><br>";
         	    			}
         					if($row["canceled"] == 1) $calendar .= "</s></font>";
+        					$calendar .= "<a href='cancel.php?id=".$row["id"]."'"">Cancel</a><br><hr><br>";
+        					$calendar .= "<a href='delete.php?id=".$row["id"]."'"">Delete</a><br><hr><br>";
             			}
         			} else {
             			$calendar .= "No bookings";
@@ -141,7 +143,7 @@ if (isset($_GET['viewall'])) {
         	return $calendar;
         }
         include 'config.php';
-        echo '<br><h3>View Appointments</h3>';
+        echo '<h3>View Appointments</h3>';
         $d = new DateTime(date("Y-m-d"));
         echo '<h3>' . $months[$d->format('n')-1] . ' ' . $d->format('Y') . '</h3>';
         echo draw_calendar($d->format('m'),$d->format('Y'));

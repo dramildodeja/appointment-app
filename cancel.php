@@ -13,16 +13,15 @@ $conn = mysqli_connect($servername, $username, $password,  $dbname);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-$id = intval(htmlspecialchars($_POST["id"]));
+$id = intval(htmlspecialchars($_GET["id"]));
 $sql = "UPDATE $tablename SET canceled=1 WHERE id = $id";
 if (mysqli_query($conn, $sql)) {
-    echo "<h3>Appointment Was Canceled!</h3>";
-}
-else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    echo "<script>alert('Appointment was cancelled successfully');</script>";
+} else {
+    echo "<script>alert('Error occurred while cancelling appointment. Please contact admin!');</script>";
 }
 mysqli_close($conn);
+header("Location: index.php?viewall=true");
 ?>
-<a href="index.php"><p>Back To Appointment Booking</p></a>
 </body>
 </html>

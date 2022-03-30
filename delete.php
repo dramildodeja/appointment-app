@@ -13,16 +13,16 @@ $conn = mysqli_connect($servername, $username, $password,  $dbname);
 if (!$conn) {
     die("Connection failed: " . mysqli_connect_error());
 }
-$id = intval(htmlspecialchars($_POST["id"]));
+$id = intval(htmlspecialchars($_GET["id"]));
 $sql = "DELETE FROM $tablename WHERE id = $id";
 if (mysqli_query($conn, $sql)) {
-    echo "<h3>Appointment Was Deleted!</h3>";
+    echo "<script>alert('Appointment was deleted successfully');</script>";
 }
 else {
-    echo "Error: " . $sql . "<br>" . mysqli_error($conn);
+    echo "<script>alert('Error occurred while deleting appointment. Please contact admin!');</script>";
 }
 mysqli_close($conn);
+header("Location: index.php?viewall=true");
 ?>
-<a href="index.php"><p>Back To Appointment Booking</p></a>
 </body>
 </html>
