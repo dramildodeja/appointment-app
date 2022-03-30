@@ -117,7 +117,7 @@ td.calendar-day, td.calendar-day-np {
 <table border="1" cellpadding="5" width="800">
    <tr>
       <td valign="top">
-         <form action="book.php" method="post">
+         <form action="book.php" method="post" novalidate>
             <h3>Book Appointment</h3>
             <div id="step1">
                <h3>Select Service</h3>
@@ -236,8 +236,8 @@ td.calendar-day, td.calendar-day-np {
                   <input name="book" type="submit" value="Book Appointment" />
                </p>
             </div>
-            <button id="stepbtn">Next Step</button>
-            <button id="backbtn">Go Back a Step</button>
+            <button id="stepbtn">Next</button>
+            <button id="backbtn">Back</button>
          </form>
       </td>
    </tr>
